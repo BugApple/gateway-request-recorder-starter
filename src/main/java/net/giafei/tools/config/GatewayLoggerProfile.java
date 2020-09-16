@@ -48,10 +48,10 @@ public class GatewayLoggerProfile {
     public static final String LOGGER_NAME = "requestRecorder";
 
     @Value("${logging.path}")
-    private String logPath;
+    private String logPath="/data/Log/";
 
     @Value("${logging.pattern.file}")
-    private String logPattern;
+    private String logPattern="%d - %p - %msg%n";
 
     @PostConstruct
     public void onReady() {
